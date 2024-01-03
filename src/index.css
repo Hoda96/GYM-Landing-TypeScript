@@ -11,3 +11,8 @@ html, body,#root,.app{
     width: 100%;
     @apply text-gray-500;
 }
+@layer components{
+    .row-flex-style{
+        @apply flex justify-between items-center;
+    }
+}
