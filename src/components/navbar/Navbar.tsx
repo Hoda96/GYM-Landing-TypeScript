@@ -22,7 +22,7 @@ const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   return (
     <nav>
       {/* <div className={`row-flex-style fixed top-0 z-30 w-full py-6 ${!isAboveMediumScreen ? "bg-primary-100" : ""}`}> */}
-      <div className={`${isTopOfPage ? "" : "bg-primary-100"} row-flex-style fixed top-0 z-30 w-full py-6`}>
+      <div className={`${isTopOfPage ? "" : "bg-primary-100 drop-shadow-sm"} row-flex-style fixed top-0 z-30 w-full py-6`}>
         <div className="row-flex-style mx-auto w-5/6">
           <div className="row-flex-style w-full gap-16">
             {/* Left Side */}
