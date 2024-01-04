@@ -9,7 +9,7 @@ import SponserRedBull from "@/assets/SponsorRedBull.png";
 
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import ActionButton from "@/shared/ActionButton";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
