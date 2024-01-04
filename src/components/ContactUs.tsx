@@ -29,7 +29,7 @@ export default function ContactUs({setSelectedPage}: Props) {
     <section id="contact us">
         <motion.div     
             onViewportEnter={()=>setSelectedPage(SelectedPage.Contactus)}
-            className="mx-auto w-5/6 py-20">
+            className="mx-auto w-5/6 py-20 mb-16">
             {/* Header */}
              <motion.div 
                 initial="hidden"

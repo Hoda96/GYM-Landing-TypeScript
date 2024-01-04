@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Benefits from "./components/benefits/Benefits";
 import OurClasses from "./components/ourClasses/OurClasses";
 import ContactUs from "./components/ContactUs";
+import Footer from "./components/Footer";
 
 
 
@@ -35,6 +36,7 @@ useEffect(()=>{
       <Benefits setSelectedPage={setSelectedPage}/>
       <OurClasses setSelectedPage={setSelectedPage}/>
       <ContactUs setSelectedPage={setSelectedPage}/>
+      <Footer/>
     </div>
   );
 }
