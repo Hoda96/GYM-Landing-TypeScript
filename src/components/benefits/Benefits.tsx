@@ -3,7 +3,8 @@ import { BenefitType, SelectedPage } from "@/shared/types"
 import { motion } from "framer-motion";
 import BenefitCard from "./BenefitCard";
 import { AcademicCapIcon, HomeModernIcon, UserGroupIcon } from "@heroicons/react/16/solid";
-
+import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png"
+import ActionButton from "@/shared/ActionButton";
 type Props = {
     setSelectedPage : (value: SelectedPage) => void;
 }
@@ -74,6 +75,51 @@ export default function Benefits({setSelectedPage}: Props) {
           />
         ))}
       </motion.div>
+      {/* Second Row */}
+      <div className="md:flex justify-between items-center gap-16 md:mt-28 mt-16">
+        {/* Left */}
+          <img className="my-0 mx-auto" src={BenefitsPageGraphic} alt="Benefits Page Graphic"/>
+        {/* Right */}
+        <div>
+          <div className="relative">
+            <div className="before:absolute before:content-abstractwaves before:-top-20 before:-left-20">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.5 }}
+                transition={{ duration: 0.5 }}
+                variants={{
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0 },
+              }}>
+                <Htitle>MILLIONS OF HAPPY MEMBERS GETTING <span className="text-primary-500">FIT</span></Htitle>
+             </motion.div>
+            </div>
+          </div>
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ delay:0.2, duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x:50 },
+              visible: { opacity: 1, x: 0 },
+             }}
+         >
+          <p className="text-justify my-6">
+            Nascetur aenean massa auctor tincidunt. Iaculis potenti amet egestas ultrices consectetur adipiscing ultricies enim. Pulvinar fames vitae vitae quis. Quis amet vulputate tincidunt at in nulla nec. Consequat sed facilisis dui sit egestas ultrices tellus. Ullamcorper arcu id pretium sapien proin integer nisl. Felis orci diam odio.
+              <br/>
+              <br/>
+            Fringilla a sed at suspendisse ut enim volutpat. Rhoncus vel est tellus quam porttitor. Mauris velit euismod elementum arcu neque facilisi. Amet semper tortor facilisis metus nibh. Rhoncus sit enim mattis odio in risus nunc.
+            </p>
+          </motion.div>
+          <div className="relative">
+            <div className="before:absolute before:content-sparkles before:-bottom-32 before:left-36 before:z-[-1]">
+            <ActionButton setSelectedPage={setSelectedPage}>Join Now</ActionButton>
+            </div>
+          </div>
+        </div>
+      </div>
       </motion.div>
     </section>
   )

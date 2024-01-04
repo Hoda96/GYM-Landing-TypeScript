@@ -18,7 +18,7 @@ export default function BenefitCard({icon, title,description,setSelectedPage}: p
   return (
     <motion.div
     variants={childVariant}
-    transition={{delay:0.2, duration:1.2}}
+    transition={{delay:0.2, duration:0.8}}
     className="px-4 py-16 border-2 border-gray-100 rounded-md text-center mt-4">
         <div className="flex flex-col items-center justify-between gap-2">
             <div className="border-2 border-gray-100 rounded-full bg-primary-100 p-4 mb-2">{icon}</div>
