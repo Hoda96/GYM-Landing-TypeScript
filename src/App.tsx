@@ -3,6 +3,7 @@ import Navbar from "./components/navbar/Navbar";
 import { SelectedPage } from "./shared/types";
 import Home from "./components/Home";
 import Benefits from "./components/benefits/Benefits";
+import OurClasses from "./components/ourClasses/OurClasses";
 
 
 
@@ -31,6 +32,7 @@ useEffect(()=>{
       <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} isTopOfPage={isTopOfPage}/>
       <Home setSelectedPage={setSelectedPage}/>
       <Benefits setSelectedPage={setSelectedPage}/>
+      <OurClasses setSelectedPage={setSelectedPage}/>
     </div>
   );
 }

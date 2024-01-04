@@ -11,3 +11,9 @@ export enum SelectedPage{
     description:string,
     // setSelectedPage ?: (value:SelectedPage)=> void,
   }
+
+  export interface ClassType {
+    title: string,
+    description ?: string,
+    image: string,
+  }

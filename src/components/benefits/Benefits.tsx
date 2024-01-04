@@ -114,7 +114,7 @@ export default function Benefits({setSelectedPage}: Props) {
             </p>
           </motion.div>
           <div className="relative">
-            <div className="before:absolute before:content-sparkles before:-bottom-32 before:left-36 before:z-[-1]">
+            <div className="before:absolute before:content-sparkles before:-bottom-32 before:left-36 before:z-[1]">
             <ActionButton setSelectedPage={setSelectedPage}>Join Now</ActionButton>
             </div>
           </div>
