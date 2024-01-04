@@ -26,6 +26,15 @@ const benefitCards: Array<BenefitType> =[
   }
 ]
 
+// Motion Style
+const container ={
+  hidden:{},
+  visible:{
+    transition:{
+      staggerChildren:0.2
+    }
+  }
+}
 
 export default function Benefits({setSelectedPage}: Props) {
   return (
@@ -35,12 +44,26 @@ export default function Benefits({setSelectedPage}: Props) {
          className="mx-auto min-h-full w-5/6 py-20"
         >
           {/* Benefits Header */}
-        <div className="md:my-5 md:w-3/5">
+        <motion.div 
+         initial="hidden"
+         whileInView="visible"
+         viewport={{ once: false, amount: 0.5 }}
+         transition={{ duration: 0.5 }}
+         variants={{
+           hidden: { opacity: 0, x: -50 },
+           visible: { opacity: 1, x: 0 },
+          }}
+        className="md:my-5 md:w-3/5">
           <Htitle>MORE THAN JUST GYM.</Htitle>
           <p className="my-4 text-sm">We provide world class fitness equipment, trainers and classes to get you to your ultimate fitness goals with ease. We provide true care into each and every member.</p>
-        </div>
+        </motion.div>
       {/* Benefits Card */}
-      <div className="md:flex justify-between items-center gap-8 my-5">
+      <motion.div 
+      initial="hidden"
+      whileInView="visible"
+      viewport={{once:true, amount:0.5}}
+      variants={container}
+      className="md:flex justify-between items-center gap-8 my-5">
         {benefitCards.map((benefitcard: BenefitType)=>(
           <BenefitCard 
           key={benefitcard.title} 
@@ -50,7 +73,7 @@ export default function Benefits({setSelectedPage}: Props) {
           setSelectedPage={setSelectedPage}
           />
         ))}
-      </div>
+      </motion.div>
       </motion.div>
     </section>
   )
