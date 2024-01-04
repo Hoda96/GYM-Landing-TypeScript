@@ -4,6 +4,7 @@ import { SelectedPage } from "./shared/types";
 import Home from "./components/Home";
 import Benefits from "./components/benefits/Benefits";
 import OurClasses from "./components/ourClasses/OurClasses";
+import ContactUs from "./components/ContactUs";
 
 
 
@@ -33,6 +34,7 @@ useEffect(()=>{
       <Home setSelectedPage={setSelectedPage}/>
       <Benefits setSelectedPage={setSelectedPage}/>
       <OurClasses setSelectedPage={setSelectedPage}/>
+      <ContactUs setSelectedPage={setSelectedPage}/>
     </div>
   );
 }

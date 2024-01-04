@@ -49,7 +49,7 @@ type Props = {setSelectedPage : (value: SelectedPage) => void;}
 
 export default function OurClasses({setSelectedPage}: Props) {
   return (
-    <section id="ourclasses" className="py-40 bg-primary-100 w-full">
+    <section id="our classes" className="py-40 bg-primary-100 w-full">
         <motion.div 
         onViewportEnter={()=>setSelectedPage(SelectedPage.OurClasses)}
        
@@ -71,7 +71,7 @@ export default function OurClasses({setSelectedPage}: Props) {
         {/* Class Slider */}
           <div className="w-full h-96 overflow-x-auto overflow-y-hidden">
               <ul className="w-[2800px] whitespace-nowrap">        
-                  {classes.map((item:ClassType,index)=>(
+                  {classes.map((item,index)=>(
                     <Class 
                     key={`${item.title}-${index}`}
                     title={item.title}

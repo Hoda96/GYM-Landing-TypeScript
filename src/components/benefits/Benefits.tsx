@@ -5,6 +5,7 @@ import BenefitCard from "./BenefitCard";
 import { AcademicCapIcon, HomeModernIcon, UserGroupIcon } from "@heroicons/react/16/solid";
 import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png"
 import ActionButton from "@/shared/ActionButton";
+
 type Props = {
     setSelectedPage : (value: SelectedPage) => void;
 }
